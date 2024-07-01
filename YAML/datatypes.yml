@@ -1,0 +1,58 @@
+# string variables
+
+myself: Akash Varun
+fruit: "apple"
+job: 'DevOps Engineer'
+
+# Multi-line bio
+bio: |
+  Hey, my name is Akash Varun.
+  I am a very nice dude.
+
+# Write a single line in multiple lines
+message: >
+  This will
+  all be
+  in one single line
+---
+# same as 
+message: this will all be in one single line
+
+number: 4587
+marks: 96.7
+booleanValue: No # no, No, NO, false, False, FALSE, 0, 
+#for true -- True, true, TRUE, 1.yes, y, Y
+
+#YAML automatically detects the datatype of the value
+# you can also specify the datatype explicitly
+zero: !!int 0
+positiveNum: !!int 18
+negativeNum: !!int -18
+binaryNum: !!int 0b11001
+octalNum: !!int 06574
+hexa: !!int 0x45
+commaValue: !!int +540_000 #540,000
+exponential numbers: 6.023E56
+---
+# floating point numbers
+marks: !!float 96.7
+infinite: !!float .inf
+not a num: .nan
+
+#other way's to represent boolean and string 
+booleanValue: !!bool FALSE
+message: !!str this will all be in one single line
+
+# null 
+surname: !!null Null #or null Null ~
+~: this is a null key 
+
+# timestamp
+date: !!timestamp 2024-07-01 
+india time: 2024-07-01T02:59:43.10 + 5:30 
+# default timezone is UTC so for india we add + 5:30
+no time zone: 2024-07-01T02:59:43.10 
+
+
+
+

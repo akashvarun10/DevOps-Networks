@@ -1,0 +1,113 @@
+student: !!seq
+  - marks
+  - name
+  - roll no 
+
+---
+#like this also 
+cities: [new york, boston]
+
+---
+#some of keys the of seq will be empty 
+#know as sparse sequence
+
+sparse seq:
+- hey
+- how
+-
+- Null
+- sup
+
+#nested sequence
+-
+  - mango
+  - apple
+  - banana
+-
+  - new york
+  - boston
+  - chicago
+---
+# key: value pairs are called maps
+!!map {
+    name: Akash,
+    age: 21,
+    city: New York
+}
+
+---
+
+# nested mappings: map within an map
+name: Akash Varun
+role:
+  age:  2898
+  job: student
+
+---
+
+# same as
+name: Akash Varun
+role: { age: 2898, job: student}
+
+# pairs: keys may have duplicate values 
+## !!pairs
+
+pair example: !!pairs
+  - job: student
+  - job: Engineer
+# this will be a array of hashtables 
+
+---
+# same as
+pair example: !!pairs [job: student, job: Engineer]
+# this will be an array of hashtables
+
+# !!set will allow you to have unique values
+names: !!set
+  ? Venkat
+  ? Akash
+  ? Varun
+
+# dictionary !!omap
+people: !!omap
+  - Akash:
+     name: Akash Varun
+     age: 2898
+     University: Northeastern
+  - Venkat:
+     name: Venkat Akash Varun  
+     age: 21
+     University: Northeastern
+
+# for visualization of the dictionary here check the YAML Notes
+
+# Reusing some properties using anchors 
+
+#anchor means what do you want to copy and where do you want to copy it.
+#here &base is used for that.
+
+likings: &likes
+  fav fruit: mango
+  dislikes: grape 
+
+# below we will use << it means that the maps the i am specifying as value should be inserted over here
+
+person1:
+  name: Venkat
+  <<: *likes
+
+person2:
+  name: Akash 
+  <<: *likes
+  dislikes: banana
+# to override you can do like this 
+
+# # person 2 will look like 
+# person2:
+#   name: Akash 
+#   fav fruit: mango
+#   dislikes: banana
+
+person3:
+  name: Varun
+  <<: *likes

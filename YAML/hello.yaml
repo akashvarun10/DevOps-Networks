@@ -1,0 +1,36 @@
+"apple" : " I am red in color"
+#key 1: "value 1"
+11: "this is Akash's roll number"
+
+--- # this is a separator, YAML will know these are different documents
+
+# lists
+- apple  
+- mango
+- banana
+- Apple
+# YAML is case sensitive 
+
+--- # this is a separator, YAML will know these are different documents
+
+#Block style datatype
+cities:
+- new york
+- boston
+- chicago
+---
+# spaces and indentation are important in YAML
+
+cities:[new york, boston]
+# this is a single line representation of the above block style
+#it's a flow style
+---
+{
+    "name": "Akash",
+    "age": 21,
+    "city": "New York"
+}
+... # to end the document
+
+# So, YAML is a collection of 0 or more documents. Each document is a collection of key-value pairs.
+

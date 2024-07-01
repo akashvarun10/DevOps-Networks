@@ -1,0 +1,7 @@
+School:
+- name: NEU
+  principal: Someone
+  Students:
+  - rno: 11
+    name: Akash 
+    marks: 96
