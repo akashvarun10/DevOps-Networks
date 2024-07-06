@@ -28,3 +28,10 @@ https://medium.com/@avijitsarkar123/docker-and-oci-runtimes-a9c23a5646d6
 ### Introducing Container Runtime Interface (CRI) in Kubernetes
 
 https://kubernetes.io/blog/2016/12/container-runtime-interface-cri-in-kubernetes/
+
+### User Load Testing with Locust 
+
+```bash
+locust -f locustfile.py --host=your_url
+
+
