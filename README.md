@@ -33,5 +33,51 @@ https://kubernetes.io/blog/2016/12/container-runtime-interface-cri-in-kubernetes
 
 ```bash
 locust -f locustfile.py --host=your_url
+```
 
+### Nginx Proxy Manager
+
+	1	Install Docker and Docker-Compose
+
+	    •	Docker Install documentation
+	    •	Docker-Compose Install documentation
+
+	2	Create a docker-compose.yml file similar to this:
+
+    
+Sure, here is the YAML configuration formatted as code in Markdown:
+
+```yaml
+version: '3.8'
+services:
+  app:
+    image: 'jc21/nginx-proxy-manager:latest'
+    restart: unless-stopped
+    ports:
+      - '80:80'
+      - '81:81'
+      - '443:443'
+    volumes:
+      - ./data:/data
+      - ./letsencrypt:/etc/letsencrypt
+```
+
+This is the bare minimum configuration required. See the documentation for more.
+
+	3	Bring up your stack by running
+
+bash
+docker-compose up -d
+
+# If using docker-compose-plugin
+docker compose up -d
+	4	Log in to the Admin UI
+When your docker container is running, connect to it on port 81 for the admin interface. Sometimes this can take a little bit because of the entropy of keys.
+http://127.0.0.1:81
+Default Admin User:
+
+
+Email:    admin@example.com
+Password: changeme
+Immediately after logging in with this default user you will be asked to modify your details and change your password.
 
