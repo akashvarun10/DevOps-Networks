@@ -20,6 +20,15 @@
 ### Docker and OCI Runtimes
 [https://medium.com/@avijitsarkar123/docker-and-oci-runtimes-a9c23a5646d6](https://medium.com/@avijitsarkar123/docker-and-oci-runtimes-a9c23a5646d6)
 
+### To keep the local directory linked with the container 
+
+```bash
+docker run -p 5173:5173 -v "$(pwd):/app" -v /app/node_modules container-name
+```
+You can also specify the volumes in the `Dockerfile` alternatively.
+
+`Docker compose watch` command also does the same alternatively.
+
 ### Introducing Container Runtime Interface (CRI) in Kubernetes
 [https://kubernetes.io/blog/2016/12/container-runtime-interface-cri-in-kubernetes/](https://kubernetes.io/blog/2016/12/container-runtime-interface-cri-in-kubernetes/)
 
