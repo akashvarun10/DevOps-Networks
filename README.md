@@ -29,6 +29,10 @@ You can also specify the volumes in the `Dockerfile` alternatively.
 
 `Docker compose watch` command also does the same alternatively.
 
+### Docker CI-CD Automation reference 
+
+https://github.com/BretFisher/docker-ci-automation/tree/main
+
 ### Introducing Container Runtime Interface (CRI) in Kubernetes
 [https://kubernetes.io/blog/2016/12/container-runtime-interface-cri-in-kubernetes/](https://kubernetes.io/blog/2016/12/container-runtime-interface-cri-in-kubernetes/)
 
