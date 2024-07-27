@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 
 app.get("/", (req, res) => {
-    res.send("I am an express server for Nginx learning");
+    res.send("I am an express server designed for learning Nginx Load Balancer");
 })
 
 app.listen(7777, () => {
