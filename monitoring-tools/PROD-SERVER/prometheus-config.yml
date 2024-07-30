@@ -4,4 +4,4 @@ global:
 scrape_configs:
   - job_name: prometheus
     static_configs:
-      - targets: ["10.20.1.44:8000"]
+      - targets: ["NODEJS_SERVER_ADDRESS"] 

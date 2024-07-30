@@ -3,5 +3,5 @@ nginx-learning/my-site/server/node_modules/
 /Users/akashvarun/Northeastern/DevOps-Networks/nginx-learning/my-site/server/node_modules/
 
 
-monitoring-cloud/PROD-SERVER/node_modules
-monitoring-cloud/PROD-SERVER/.env
+monitoring-tools/PROD-SERVER/node_modules
+monitoring-tools/PROD-SERVER/.env
